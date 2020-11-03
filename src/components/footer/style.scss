@@ -1,0 +1,27 @@
+.footer {
+  margin: 0 auto;
+  padding: 35px 0;
+  max-width: 1125px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__copyright {
+  color: #212121;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 700;
+}
+
+.footer__copyright-heart {
+  color: #9b2d30;
+}
+
+.footer__link {
+  color: #212121;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 700;
+}
