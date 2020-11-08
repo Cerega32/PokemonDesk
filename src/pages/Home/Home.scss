@@ -1,0 +1,10 @@
+@import '../../variables';
+
+.home {
+  min-height: 100vh;
+  background: linear-gradient(180deg, $third 0%, $primary 100%);
+}
+
+.content {
+  display: flex;
+}
