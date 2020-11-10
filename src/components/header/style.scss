@@ -1,8 +1,10 @@
+@import '../../variables';
+
 .header {
   padding: 14px 0 16px;
 
   box-shadow: 0px 4px 16px rgba(1, 28, 64, 0.2);
-  background: #f5db13;
+  background: $third;
 }
 
 .header__wrapper {
@@ -15,14 +17,33 @@
 }
 
 .header__link {
+  position: relative;
   margin: 0 25px;
-  padding: 13px 0;
 
-  color: #212121;
+  color: $dark;
   font-size: 25px;
   line-height: 29px;
-}
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -8px;
+    height: 1px;
+    width: 1%;
+    background: $dark;
+    border: 1px solid $dark;
+    border-radius: 6px;
+    opacity: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: opacity, width ease-in-out 0.25s;
+  }
 
-.header__link--active {
-  border-bottom: 3px solid #212121;
+  &:hover,
+  & .header__link--active {
+    &:after {
+      width: 100%;
+      opacity: 1;
+    }
+  }
 }
