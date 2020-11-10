@@ -4,10 +4,10 @@ import s from './Button.module.scss';
 
 interface ButtonProps {
   onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
-  widthAll: boolean;
-  color: string;
-  height: number;
-  sizeFont: string;
+  widthAll?: boolean;
+  color?: string;
+  height?: number;
+  sizeFont?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
