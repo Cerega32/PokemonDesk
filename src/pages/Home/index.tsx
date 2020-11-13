@@ -1,9 +1,10 @@
+import { navigate } from 'hookrouter';
 import React from 'react';
 import Button from '../../components/button';
 import Footer from '../../components/footer';
-import Header from '../../components/header';
 import Heading from '../../components/heading';
 import Parallax from '../../components/parallax';
+import { LinkEnum } from '../../routes';
 
 import s from './Home.module.scss';
 
@@ -19,14 +20,13 @@ const HomePage: React.FC = () => {
   // } = props;
   return (
     <div className={s.root}>
-      <Header />
       <div className={s.content}>
         <div>
           <Heading heading={2}>Find all your favorite Pokemon</Heading>
           <Heading heading={3}>You can know the type of Pokemon, its strengths, disadvantages and abilities</Heading>
           <Button
             // eslint-disable-next-line no-console
-            onClick={() => console.log('!!!')}
+            onClick={() => navigate(LinkEnum.POKEDEX)}
             color="#73D677"
             height={66}
             widthAll={false}
