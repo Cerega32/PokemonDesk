@@ -2,12 +2,13 @@ import React from 'react';
 
 interface HeadingProps {
   heading: number;
+  className?: string;
 }
 
-const Heading: React.FC<HeadingProps> = ({ children, heading }) => {
+const Heading: React.FC<HeadingProps> = ({ children, heading, className }) => {
   const head = `h${heading}`;
 
-  return React.createElement(head, null, children);
+  return React.createElement(head, { class: className }, children);
 };
 
 export default Heading;

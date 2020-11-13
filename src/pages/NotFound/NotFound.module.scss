@@ -1,0 +1,16 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+
+  background: #d93e30;
+
+  color: #fff;
+}
+
+.root__text {
+  color: #000;
+}

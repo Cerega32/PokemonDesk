@@ -1,10 +1,12 @@
 @import '../../variables';
 
-.home {
+.root {
   min-height: 100vh;
   background: linear-gradient(180deg, $third 0%, $primary 100%);
 }
 
 .content {
+  margin: 30px 0;
   display: flex;
+  justify-content: center;
 }
