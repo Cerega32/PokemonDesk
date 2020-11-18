@@ -4,29 +4,37 @@ import PokedexPage from './pages/Pokedex';
 
 interface IGeneralMenu {
   title: string;
-  link: string;
+  link: LinkEnum;
   component: () => JSX.Element;
+}
+
+// eslint-disable-next-line no-shadow
+export enum LinkEnum {
+  HOME = '/',
+  POKEDEX = '/pokedex',
+  LEGENDARIES = '/legendaries',
+  DOCUMENTATION = '/documentation',
 }
 
 export const GENERAL_MENU: IGeneralMenu[] = [
   {
     title: 'Home',
-    link: '/',
+    link: LinkEnum.HOME,
     component: () => <HomePage />,
   },
   {
     title: 'Pokédex',
-    link: '/pokedex',
+    link: LinkEnum.POKEDEX,
     component: () => <PokedexPage />,
   },
   {
     title: 'Legendaries',
-    link: '/legendaries',
+    link: LinkEnum.LEGENDARIES,
     component: () => <PokedexPage />,
   },
   {
     title: 'Documentation',
-    link: '/documentation',
+    link: LinkEnum.DOCUMENTATION,
     component: () => <PokedexPage />,
   },
 ];
